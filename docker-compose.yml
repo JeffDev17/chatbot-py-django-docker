@@ -1,4 +1,4 @@
-version: '3.8'
+#version: '3.8'
 
 services:
   db:
@@ -12,7 +12,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data  # 🔥 Volume para persistência do banco
+      - postgres_data:/var/lib/postgresql/data  
 
   web:
     build: .
@@ -25,7 +25,7 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:minha_senha@db:5432/meu_projeto
     volumes:
-      - .:/app  # 🔥 Esse volume deve estar dentro do "web"
+      - .:/app  
 
 volumes:
-  postgres_data:  # 🔥 Declaração do volume para o banco
+  postgres_data:  
