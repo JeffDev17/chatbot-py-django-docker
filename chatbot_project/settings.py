@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import dj_database_url
 from pathlib import Path
+from decouple import config
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
